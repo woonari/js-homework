@@ -1,6 +1,6 @@
 const handleFetch = async () => {
   try {
-    const response = await fetch("/assets/data/data-gnb.json");
+    const response = await fetch("/js-homework/assets/data/data-gnb.json");
     const data = await response.json();
     return data;
   } catch (error) {
