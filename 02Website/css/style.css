@@ -412,7 +412,8 @@
       color: var(--white);
       font-size: 18px;
       font-weight: 700;
-      background: linear-gradient(var(--blue), var(--blue)) no-repeat bottom/0 7px;
+      background: linear-gradient(var(--blue), var(--blue)) no-repeat bottom/0
+        7px;
       transition: 0.5s;
     }
     .gnb > ul > li:hover > a {
@@ -548,7 +549,8 @@
     #family {
       position: absolute;
       width: auto;
-      inset: auto anchor(--family right) anchor(--family top) anchor(--family left);
+      inset: auto anchor(--family right) anchor(--family top)
+        anchor(--family left);
     }
     .footer:has(#family:popover-open) .btn-family path {
       transform: rotate(45deg);
@@ -783,7 +785,8 @@
       padding-block: 30px;
     }
     .select {
-      background: url(../images/ico_select.svg) no-repeat right 20px center var(--grayfa);
+      background: url(../images/ico_select.svg) no-repeat right 20px center
+        var(--grayfa);
       padding-right: 42px;
       color: var(--graycc);
       font-size: 16px;
@@ -967,7 +970,8 @@
       border-bottom: 1px solid var(--gray99);
     }
     .table-type2 thead th + th {
-      background: linear-gradient(to right, var(--graye1), var(--graye1)) no-repeat left center/1px 16px;
+      background: linear-gradient(to right, var(--graye1), var(--graye1))
+        no-repeat left center/1px 16px;
     }
     .table-type2 tbody tr {
       border-bottom: 1px solid var(--graye1);
@@ -1143,7 +1147,13 @@
     inherits: true;
     initial-value: auto;
   }
-  :is(.mxauto, .header__wrap, .footer__top > div, .footer__bottom > div, .container) {
+  :is(
+      .mxauto,
+      .header__wrap,
+      .footer__top > div,
+      .footer__bottom > div,
+      .container
+    ) {
     width: 1224px;
     margin-inline: auto;
   }
@@ -1624,4 +1634,42 @@
   }
 }
 
+.customSelect {
+  display: inline-block;
+  position: relative;
+  > button {
+    background: url(../images/ico_select.svg) no-repeat right 20px center
+      var(--grayfa);
+    color: var(--graycc);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    padding-inline: 20px;
+    padding-right: 42px;
+    width: var(--width);
+    height: var(--height);
+    border: 1px solid var(--graye1);
+    box-sizing: border-box;
+  }
+  div {
+    display: none;
+    position: absolute;
+    left: 0;
+    font-size: 0;
+    border: 1px solid var(--gray99);
+    li + li {
+      border-top: 1px solid var(--gray99);
+    }
+    button {
+      min-width: 80px;
+      padding: 2px 10px;
+      text-align: left;
+    }
+  }
+  &.active {
+    div {
+      display: block;
+    }
+  }
+}
 /*# sourceMappingURL=style.css.map */

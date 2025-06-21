@@ -1,6 +1,7 @@
 const handleFetch = async () => {
   try {
     const response = await fetch("/js-homework/assets/data/data-gnb.json");
+    // const response = await fetch("/assets/data/data-gnb.json");
     const data = await response.json();
     return data;
   } catch (error) {
@@ -59,7 +60,10 @@ export const GNB = async () => {
                     .map((navItem) => {
                       return /* html */ `
                         <li>
-                            <a href="${link(item.title, navItem.link)}" target="frame">${navItem.name}</a>
+                            <a href="${link(
+                              item.title,
+                              navItem.link
+                            )}" target="frame">${navItem.name}</a>
                         </li>
                       `;
                     })
@@ -78,7 +82,12 @@ export const GNB = async () => {
                             .map((navItem, i) => {
                               return /* html */ `
                                 <li>
-                                    <a href="${link(item.title, navItem.link)}" target="frame"  class="${idx === 0 && i === 0 ? "active" : ""}">${navItem.name}</a>
+                                    <a href="${link(
+                                      item.title,
+                                      navItem.link
+                                    )}" target="frame"  class="${
+                                idx === 0 && i === 0 ? "active" : ""
+                              }">${navItem.name}</a>
                                 </li>
                               `;
                             })
