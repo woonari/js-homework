@@ -38,6 +38,34 @@ const link = (title, link) => {
       break;
   }
 };
+// const link = (title, link) => {
+//   switch (title) {
+//     case "basic":
+//       return `/00Basic/${link}`;
+//       break;
+//     case "content":
+//       return `/01Content/${link}`;
+//       break;
+//     case "website project":
+//       return `/02Website/${link}`;
+//       break;
+//     case "mobile project":
+//       return `/03Mobile/${link}`;
+//       break;
+//     case "responsive project":
+//       return `/04Responsive/${link}`;
+//       break;
+//     case "swiper":
+//       return `/05Swiper/${link}`;
+//       break;
+//     case "chartjs":
+//       return `/06Chart/${link}`;
+//       break;
+//     case "gsap":
+//       return `/07Gsap/${link}`;
+//       break;
+//   }
+// };
 
 export const GNB = async () => {
   const gnb = document.querySelector("#gnb");
